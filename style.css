@@ -50,6 +50,9 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* Global accent — wins everywhere */
+.accent { color: var(--accent) !important; }
+
 /* ═══════════════════════════════════════════
    NAV
 ═══════════════════════════════════════════ */
@@ -151,7 +154,7 @@ a:hover { text-decoration: underline; }
 
 .hero-headline {
   font-family: var(--font-sans);
-  font-size: clamp(1.4rem, 2.2vw, 2rem); 
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
   font-weight: 400;
   line-height: 1.65;
   color: var(--text);
@@ -160,8 +163,6 @@ a:hover { text-decoration: underline; }
 .hero-headline .accent-word {
   color: var(--accent);
 }
-
-.accent { color: var(--accent); }
 
 @keyframes fadeUp {
   from {
@@ -282,10 +283,6 @@ a:hover { text-decoration: underline; }
   line-height: 1.9;
   color: var(--text-muted);
   margin-bottom: 1.1rem;
-}
-
-.about-text .accent {
-  color: var(--accent) !important;
 }
 
 .about-personal { font-style: italic; margin-top: 0.5rem; }
