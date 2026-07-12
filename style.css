@@ -11,7 +11,7 @@
   --border:    #1e3a5f;
   --text:      #ccd6f6;
   --text-muted:#8892b0;
-  --dim:       #546a8a;
+  --dim:       #7a90aa;     
   --accent:    #e8a0b4;
   --accent2:   #cf8fa0;
   --ok:        #7ec8a0;
@@ -30,7 +30,7 @@ body.light {
   --border:    #b8cce0;
   --text:      #1a2a3a;
   --text-muted:#3a5068;
-  --dim:       #6a8aaa;
+  --dim:       #4a6a88;
   --accent:    #b5446a;
   --accent2:   #c45a7a;
   --ok:        #2e7d52;
@@ -153,7 +153,7 @@ a:hover { text-decoration: underline; }
 .hero-tag {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--dim);
+  color: var(--text-muted);       
   margin-bottom: 1.2rem;
   letter-spacing: 1px;
 }
@@ -175,7 +175,7 @@ a:hover { text-decoration: underline; }
   margin-top: 1.5rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--dim);
+  color: var(--text-muted); 
 }
 
 .status-dot {
@@ -193,7 +193,10 @@ a:hover { text-decoration: underline; }
 }
 
 /* Photo — rectangle with rounded corners */
-.hero-photo-wrap { flex-shrink: 0; }
+.hero-photo-wrap {
+  flex-shrink: 0;
+  margin-right: 4rem;             
+}
 
 .hero-photo {
   width: 160px;
@@ -218,7 +221,7 @@ a:hover { text-decoration: underline; }
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--dim);
+  color: var(--text-muted);       
   margin-bottom: 1.6rem;
 }
 
@@ -237,7 +240,7 @@ a:hover { text-decoration: underline; }
 .about-subhead {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--dim);
+  color: var(--text-muted);       
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 1.4rem 0 0.8rem;
@@ -292,7 +295,7 @@ a:hover { text-decoration: underline; }
 .exp-date {
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  color: var(--dim);
+  color: var(--text-muted);       
   white-space: nowrap;
   padding-top: 0.1rem;
 }
@@ -375,7 +378,7 @@ a:hover { text-decoration: underline; }
 .card-stack {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--dim);
+  color: var(--text-muted);
 }
 
 /* ═══════════════════════════════════════════
@@ -421,7 +424,7 @@ a:hover { text-decoration: underline; }
   padding: 2rem 0 0;
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--dim);
+  color: var(--text-muted); 
   text-align: center;
 }
 
