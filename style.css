@@ -151,13 +151,38 @@ a:hover { text-decoration: underline; }
 
 .hero-headline {
   font-family: var(--font-sans);
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.4rem, 2.2vw, 2rem); 
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.65;
   color: var(--text);
 }
 
-.accent { color: var(--accent); }
+.hero-headline .accent-word {
+  color: var(--accent);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-headline .line {
+  display: block;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.hero-headline .line:nth-child(1) { animation-delay: 0.1s; }
+.hero-headline .line:nth-child(2) { animation-delay: 0.3s; }
+.hero-headline .line:nth-child(3) { animation-delay: 0.5s; }
+.hero-headline .line:nth-child(4) { animation-delay: 0.7s; }
+.hero-headline .line:nth-child(5) { animation-delay: 0.9s; }
 
 .hero-status {
   display: flex;
