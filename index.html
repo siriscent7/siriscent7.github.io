@@ -3,517 +3,379 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-        content="Anushka Siri Raghunandan — terminal portfolio. Type 'help' to begin." />
-  <title>anushka@siriscent7:~</title>
+  <title>Anushka Raghunandan</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="terminal-window">
+  <!-- ═══════════════════════════════════════════
+       MAIN SCROLLABLE PAGE
+  ═══════════════════════════════════════════ -->
+  <main class="page">
 
-  <!-- ── Title bar ── -->
-  <div class="terminal-titlebar">
-    <div class="titlebar-dots">
-      <div class="dot dot-red"></div>
-      <div class="dot dot-yellow"></div>
-      <div class="dot dot-green"></div>
+    <!-- NAV -->
+    <nav class="nav">
+      <span class="nav-logo">AR_</span>
+      <div class="nav-links">
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+        <a href="#" class="nav-resume">resume ↗</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="hero-tag">// Technical Consulting Engineer II @ Cisco</p>
+        <h1 class="hero-headline">
+          I love Systems.<br/>
+          I love Security.<br/>
+          I love building things that are<br/>
+          <span class="accent">fast, correct,</span><br/>
+          and hard to break.
+        </h1>
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span>Available for new opportunities</span>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img src="image.jpeg" alt="Anushka Raghunandan" class="hero-photo" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="section-title">about<span class="accent">.</span></h2>
+      <p class="about-text">
+        I'm a systems-minded engineer who builds at the intersection of
+        infrastructure, security, and developer tooling. From distributed
+        key-value stores to OAuth2 platforms and LLM attack/defense research —
+        I gravitate toward problems that are architecturally interesting and
+        operationally real.
+      </p>
+      <p class="about-text">
+        Currently at Cisco, helping customers navigate complex network deployments.
+        Outside of work, I'm probably writing a query engine or breaking something
+        on purpose to see how it fails.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2 class="section-title">projects<span class="accent">.</span></h2>
+      <div class="project-grid">
+
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-title">VeritasDB</span>
+            <span class="card-tag">Distributed Systems</span>
+          </div>
+          <p>Distributed key-value store built on Raft consensus, LSM-tree storage, and MVCC — engineered for correctness under partition and failure.</p>
+          <div class="card-stack">Rust · Raft · LSM-tree · MVCC</div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-title">SentinelIAM</span>
+            <span class="card-tag">Security</span>
+          </div>
+          <p>Full OAuth2/OIDC identity platform with RBAC, JWT rotation, and audit logging. Production-grade access control from scratch.</p>
+          <div class="card-stack">Go · OAuth2 · OIDC · PostgreSQL</div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-title">Flurry</span>
+            <span class="card-tag">Query Engine</span>
+          </div>
+          <p>Java-based SQL query engine with a custom parser, logical/physical planner, and vectorised execution model.</p>
+          <div class="card-stack">Java · SQL · Query Planning · Vectorised Exec</div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-title">OptiFlow</span>
+            <span class="card-tag">ML Systems</span>
+          </div>
+          <p>Neural network graph compiler with operator fusion and memory layout optimisation. Achieved 27% p95 latency reduction.</p>
+          <div class="card-stack">Python · MLIR · Graph Optimization · CUDA</div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-title">Warden</span>
+            <span class="card-tag">LLM Security</span>
+          </div>
+          <p>Research framework for LLM attack and defense — prompt injection, jailbreak taxonomy, and guardrail benchmarking.</p>
+          <div class="card-stack">Python · LLMs · Red Teaming · NLP</div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-header">
+            <span class="card-title">TenantGuard</span>
+            <span class="card-tag">Infrastructure</span>
+          </div>
+          <p>Multi-tenant rate-limiting middleware achieving 2,340 req/s throughput with token bucket and sliding window algorithms.</p>
+          <div class="card-stack">Go · Redis · Middleware · Rate Limiting</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section-title">skills<span class="accent">.</span></h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <p>Go · Rust · Java · Python · C++ · SQL · TypeScript</p>
+        </div>
+        <div class="skill-group">
+          <h3>Systems</h3>
+          <p>Distributed Consensus · Storage Engines · Query Planning · OS Internals</p>
+        </div>
+        <div class="skill-group">
+          <h3>Security</h3>
+          <p>OAuth2 / OIDC · Zero Trust · IAM · LLM Red Teaming · Threat Modelling</p>
+        </div>
+        <div class="skill-group">
+          <h3>Infrastructure</h3>
+          <p>Kubernetes · Docker · Spark · Kafka · PostgreSQL · Redis</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section-title">contact<span class="accent">.</span></h2>
+      <p class="about-text">Open to systems, security, and infra roles. Best reached by email.</p>
+      <div class="contact-links">
+        <a href="mailto:anushka@email.com">anushka@email.com ↗</a>
+        <a href="https://github.com/siriscent7" target="_blank">github ↗</a>
+        <a href="https://linkedin.com/in/anushka" target="_blank">linkedin ↗</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>built with intention. designed to last. © 2025 Anushka Raghunandan</span>
+    </footer>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════
+       FLOATING TERMINAL CONSOLE
+  ═══════════════════════════════════════════ -->
+  <div class="terminal-container" id="terminalContainer">
+
+    <div class="terminal-titlebar" id="terminalTitlebar">
+      <div class="terminal-dots">
+        <span class="dot dot-red" id="termClose" title="close"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+      </div>
+      <span class="terminal-title">anushka@portfolio ~ </span>
+      <button class="terminal-toggle" id="termToggle" title="collapse">▾</button>
     </div>
-    <div class="titlebar-title">anushka@siriscent7: ~</div>
-  </div>
 
-  <!-- ── Output area ── -->
-  <div class="terminal-body" id="terminal-body">
-
-    <!-- Boot sequence — shown on load -->
-    <div id="boot">
-      <pre class="ascii-banner">
-  ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗
-  ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
-  ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
-  ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
-  ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
-  ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝
-      </pre>
-
-      <div class="sysinfo">
-        <span>anushka@siriscent7</span> — Technical Consulting Engineer II, Cisco
+    <div class="terminal-body" id="terminalBody">
+      <div class="terminal-output" id="output"></div>
+      <div class="terminal-input-row">
+        <span class="prompt">❯</span>
+        <input
+          type="text"
+          id="termInput"
+          class="term-input"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          placeholder="type 'help'"
+          autofocus
+        />
       </div>
-      <div class="sysinfo">
-        <span>location</span> — Bengaluru, India
-      </div>
-      <div class="sysinfo">
-        <span>focus</span> — Systems · Security · AI
-      </div>
-
-      <hr class="divider" />
-
-      <div class="out-line muted">
-        Welcome. This terminal is interactive.
-      </div>
-      <div class="out-line muted">
-        Type <span style="color:var(--pink-bright)">help</span>
-        to see available commands.
-      </div>
-      <br />
     </div>
 
-    <!-- Dynamic output renders here -->
-    <div id="output"></div>
-
-  </div><!-- /terminal-body -->
-
-  <!-- ── Sticky input ── -->
-  <div class="input-row">
-    <span class="input-prompt">
-      <span class="prompt-path">anushka@siriscent7</span>:<span
-        style="color:var(--pink-dim)">~</span><span
-        class="prompt-dollar">$</span>
-    </span>
-    <input
-      id="cmd-input"
-      type="text"
-      autocomplete="off"
-      autocorrect="off"
-      autocapitalize="off"
-      spellcheck="false"
-      placeholder="type a command..."
-      autofocus
-    />
   </div>
 
-</div><!-- /terminal-window -->
 
-<script>
-// ═══════════════════════════════════════════════════
-//  DATA
-// ═══════════════════════════════════════════════════
-const DATA = {
+  <script>
+  // ─────────────────────────────────────────
+  // DATA
+  // ─────────────────────────────────────────
+  const DATA = {
+    help: `
+      <div class="kv-table">
+        <div class="kv-row"><span class="kv-key">about</span><span class="kv-val">who I am</span></div>
+        <div class="kv-row"><span class="kv-key">experience</span><span class="kv-val">work history</span></div>
+        <div class="kv-row"><span class="kv-key">projects</span><span class="kv-val">things I've built</span></div>
+        <div class="kv-row"><span class="kv-key">skills</span><span class="kv-val">tools & technologies</span></div>
+        <div class="kv-row"><span class="kv-key">resume</span><span class="kv-val">open resume PDF</span></div>
+        <div class="kv-row"><span class="kv-key">contact</span><span class="kv-val">get in touch</span></div>
+        <div class="kv-row"><span class="kv-key">clear</span><span class="kv-val">clear terminal</span></div>
+      </div>`,
 
-  about: `
-<div class="out-heading">about</div>
-<div class="kv-table">
-  <span class="kv-key">name</span>
-  <span class="kv-val">Anushka Siri Raghunandan</span>
+    about: `
+      <p>Anushka Raghunandan — Technical Consulting Engineer II @ Cisco.</p>
+      <p>I build at the intersection of systems, security, and developer tooling.<br/>
+      Distributed stores, query engines, IAM platforms, ML compilers, LLM red-teaming.<br/>
+      I like problems that are architecturally interesting and operationally real.</p>`,
 
-  <span class="kv-key">role</span>
-  <span class="kv-val">Technical Consulting Engineer II @ Cisco</span>
+    experience: `
+      <div class="timeline">
+        <div class="tl-entry">
+          <span class="tl-date">2023 – present</span>
+          <span class="tl-role">Technical Consulting Engineer II</span>
+          <span class="tl-company">Cisco Systems</span>
+          <p class="tl-desc">Customer-facing network architecture, complex deployments, escalation engineering.</p>
+        </div>
+      </div>`,
 
-  <span class="kv-key">education</span>
-  <span class="kv-val">B.Tech, CSE — PES University, Bengaluru</span>
+    projects: `
+      <div class="proj-list">
+        <div class="proj-entry"><span class="proj-name">VeritasDB</span> — Distributed KV store · Raft, LSM-tree, MVCC</div>
+        <div class="proj-entry"><span class="proj-name">SentinelIAM</span> — OAuth2/OIDC identity platform · RBAC, JWT rotation</div>
+        <div class="proj-entry"><span class="proj-name">Flurry</span> — Java SQL engine · custom parser, vectorised execution</div>
+        <div class="proj-entry"><span class="proj-name">OptiFlow</span> — NN graph compiler · 27% p95 latency reduction</div>
+        <div class="proj-entry"><span class="proj-name">Warden</span> — LLM attack/defense framework · red teaming</div>
+        <div class="proj-entry"><span class="proj-name">TenantGuard</span> — Rate-limiting middleware · 2,340 req/s</div>
+        <div class="proj-entry"><span class="proj-name">QueryLens</span> — SQL observability platform</div>
+        <div class="proj-entry"><span class="proj-name">RedactLog</span> — PII redaction pipeline</div>
+        <div class="proj-entry"><span class="proj-name">DriftGate</span> — ML drift detection</div>
+        <div class="proj-entry"><span class="proj-name">FlurryPilot</span> — SQL agent · LLM-powered query generation</div>
+      </div>`,
 
-  <span class="kv-key">focus</span>
-  <span class="kv-val">Systems · Security · AI</span>
+    skills: `
+      <div class="kv-table">
+        <div class="kv-row"><span class="kv-key">languages</span><span class="kv-val">Go · Rust · Java · Python · C++ · SQL · TypeScript</span></div>
+        <div class="kv-row"><span class="kv-key">systems</span><span class="kv-val">Distributed Consensus · Storage Engines · Query Planning</span></div>
+        <div class="kv-row"><span class="kv-key">security</span><span class="kv-val">OAuth2/OIDC · Zero Trust · IAM · LLM Red Teaming</span></div>
+        <div class="kv-row"><span class="kv-key">infra</span><span class="kv-val">Kubernetes · Docker · Spark · Kafka · Redis</span></div>
+      </div>`,
 
-  <span class="kv-key">linkedin</span>
-  <span class="kv-val">
-    <a href="https://www.linkedin.com/in/anushka-raghunandan/"
-       target="_blank">linkedin.com/in/anushka-raghunandan ↗</a>
-  </span>
+    contact: `
+      <div class="kv-table">
+        <div class="kv-row"><span class="kv-key">email</span><span class="kv-val"><a href="mailto:anushka@email.com">anushka@email.com</a></span></div>
+        <div class="kv-row"><span class="kv-key">github</span><span class="kv-val"><a href="https://github.com/siriscent7" target="_blank">siriscent7</a></span></div>
+        <div class="kv-row"><span class="kv-key">linkedin</span><span class="kv-val"><a href="https://linkedin.com/in/anushka" target="_blank">linkedin ↗</a></span></div>
+      </div>`,
+  };
 
-  <span class="kv-key">email</span>
-  <span class="kv-val">
-    <a href="mailto:sranushka2025@gmail.com">sranushka2025@gmail.com</a>
-  </span>
+  // ─────────────────────────────────────────
+  // BOOT SEQUENCE
+  // ─────────────────────────────────────────
+  const BOOT_LINES = [
+    `<span class="accent">█████████████████████████████████</span>`,
+    `<span class="accent">  A N U S H K A  R A G H U N A N D A N</span>`,
+    `<span class="accent">█████████████████████████████████</span>`,
+    ``,
+    `<span class="dim">  Systems · Security · Infrastructure</span>`,
+    ``,
+    `  Initialising portfolio...`,
+    `  <span class="ok">[  OK  ]</span> kernel loaded`,
+    `  <span class="ok">[  OK  ]</span> identity verified`,
+    `  <span class="ok">[  OK  ]</span> projects mounted`,
+    `  <span class="ok">[  OK  ]</span> defenses active`,
+    ``,
+    `  Type <span class="accent">help</span> to see available commands.`,
+    ``,
+  ];
 
-  <span class="kv-key">github</span>
-  <span class="kv-val">
-    <a href="https://github.com/siriscent7"
-       target="_blank">github.com/siriscent7 ↗</a>
-  </span>
-</div>
-<br/>
-<div class="out-line muted" style="max-width:620px">
-  I love Systems. I love Security.
-  I love building things that are fast, correct, and hard to break.
-</div>`,
+  // ─────────────────────────────────────────
+  // ENGINE
+  // ─────────────────────────────────────────
+  const output   = document.getElementById('output');
+  const input    = document.getElementById('termInput');
+  let history    = [];
+  let historyIdx = -1;
 
-  experience: `
-<div class="out-heading">experience</div>
-<div class="timeline-entry">
-  <div class="timeline-role">Technical Consulting Engineer II</div>
-  <div class="timeline-org">Cisco</div>
-  <div class="timeline-period">2023 — Present · Bengaluru, India</div>
-  <div class="timeline-desc">
-    Enterprise networking and security consulting.
-    Helping customers architect, deploy, and troubleshoot
-    infrastructure at scale.
-  </div>
-</div>
-<div class="out-heading" style="margin-top:20px">education</div>
-<div class="timeline-entry">
-  <div class="timeline-role">B.Tech — Computer Science &amp; Engineering</div>
-  <div class="timeline-org">PES University</div>
-  <div class="timeline-period">2019 — 2023 · Bengaluru, India</div>
-  <div class="timeline-desc">
-    Core CS: systems, algorithms, networks, databases.
-  </div>
-</div>`,
-
-  projects: `
-<div class="out-heading">projects</div>
-
-<div class="project-entry">
-  <div class="project-name">
-    <span class="project-index">[01]</span>VeritasDB
-  </div>
-  <div class="project-stack">Java · gRPC · Raft · LSM-tree · MVCC</div>
-  <div class="project-desc">
-    Distributed transactional key-value store from scratch.
-    Raft consensus, LSM-tree storage engine, and MVCC snapshot
-    isolation — real multi-process cluster over gRPC with automatic
-    leader election and failover.
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/siriscent7/veritasdb"
-       target="_blank">github ↗</a>
-  </div>
-</div>
-
-<div class="project-entry">
-  <div class="project-name">
-    <span class="project-index">[02]</span>SentinelIAM
-  </div>
-  <div class="project-stack">Go · OAuth2 · OIDC · RS256 · AES-256-GCM</div>
-  <div class="project-desc">
-    OAuth2 / OIDC identity platform from scratch. PKCE, RS256 JWTs,
-    refresh-token rotation with theft detection, RBAC, and envelope
-    encryption for secrets at rest.
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/siriscent7/sentineliam"
-       target="_blank">github ↗</a>
-  </div>
-</div>
-
-<div class="project-entry">
-  <div class="project-name">
-    <span class="project-index">[03]</span>Flurry
-  </div>
-  <div class="project-stack">Java · Columnar Storage · Compiler · JMH</div>
-  <div class="project-desc">
-    Columnar SQL query engine from scratch. Hand-written lexer/parser,
-    rule-based optimizer with predicate pushdown, morsel-driven parallel
-    execution — 2.9× speedup on 2M rows.
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/siriscent7/flurry"
-       target="_blank">github ↗</a>
-  </div>
-</div>
-
-<div class="project-entry">
-  <div class="project-name">
-    <span class="project-index">[04]</span>OptiFlow
-  </div>
-  <div class="project-stack">Python · ONNX · PyTorch · Graph IR</div>
-  <div class="project-desc">
-    Neural network graph compiler. Lifts ONNX models into a custom IR,
-    runs constant folding, dead-node elimination, and operator fusion.
-    ResNet-18: 51 → 34 nodes, 27% p95 latency reduction.
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/siriscent7/optiflow"
-       target="_blank">github ↗</a>
-  </div>
-</div>
-
-<div class="project-entry">
-  <div class="project-name">
-    <span class="project-index">[05]</span>TenantGuard
-  </div>
-  <div class="project-stack">Go · Redis · Lua · k6 · Docker</div>
-  <div class="project-desc">
-    Multi-tenant rate-limiting control plane. Distributed token-bucket
-    via atomic Redis Lua scripts — 2,340 req/s, zero errors under k6
-    load test.
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/siriscent7/tenantguard"
-       target="_blank">github ↗</a>
-    <a href="https://tenantguard-bvid.onrender.com"
-       target="_blank">live demo ↗</a>
-  </div>
-</div>
-
-<div class="project-entry">
-  <div class="project-name">
-    <span class="project-index">[06]</span>Warden
-  </div>
-  <div class="project-stack">Python · Ollama · SQLite · Streamlit</div>
-  <div class="project-desc">
-    LLM attack and defense evaluation harness. Fires jailbreak batteries,
-    applies layered defenses, measures Attack Success Rate before vs.
-    after. Runs entirely locally — no API keys, no cloud.
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/siriscent7/warden"
-       target="_blank">github ↗</a>
-  </div>
-</div>
-
-<div class="project-entry">
-  <div class="project-name">
-    <span class="project-index">[07]</span>QueryLens
-  </div>
-  <div class="project-stack">Python · DuckDB · sqlglot · Streamlit</div>
-  <div class="project-desc">
-    Query observability plane. Fingerprints SQL query logs, ranks by
-    scan cost, flags caching opportunities — collapses 10k queries into
-    7 shapes in ~694 ms.
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/siriscent7/querylens"
-       target="_blank">github ↗</a>
-    <a href="https://querylens-xrdordlvnmdxddb75b9jv9.streamlit.app/"
-       target="_blank">live demo ↗</a>
-  </div>
-</div>
-
-<div class="project-entry">
-  <div class="project-name">
-    <span class="project-index">[08]</span>DriftGate
-  </div>
-  <div class="project-stack">Python · FastAPI · Prometheus · Docker</div>
-  <div class="project-desc">
-    ML drift-detection control plane. Monitors feature distributions
-    in real time using PSI + KS-test, exposes Prometheus metrics, and
-    alerts on significant drift.
-  </div>
-  <div class="project-links">
-    <a href="https://github.com/siriscent7/driftgate"
-       target="_blank">github ↗</a>
-    <a href="https://driftgate.onrender.com/dashboard"
-       target="_blank">live demo ↗</a>
-  </div>
-</div>`,
-
-  skills: `
-<div class="out-heading">skills</div>
-<div class="skills-columns">
-
-  <div class="skill-col">
-    <div class="skill-col-header">Languages</div>
-    <ul>
-      <li>Java</li>
-      <li>Go</li>
-      <li>Python</li>
-      <li>JavaScript</li>
-      <li>SQL</li>
-    </ul>
-  </div>
-
-  <div class="skill-col">
-    <div class="skill-col-header">Systems</div>
-    <ul>
-      <li>Distributed Systems</li>
-      <li>Query Engines</li>
-      <li>Raft Consensus</li>
-      <li>LSM-tree Storage</li>
-      <li>MVCC</li>
-    </ul>
-  </div>
-
-  <div class="skill-col">
-    <div class="skill-col-header">Security</div>
-    <ul>
-      <li>OAuth2 / OIDC</li>
-      <li>JWT / PKCE</li>
-      <li>IAM / RBAC</li>
-      <li>LLM Red-teaming</li>
-      <li>PII Redaction</li>
-    </ul>
-  </div>
-
-  <div class="skill-col">
-    <div class="skill-col-header">AI / ML</div>
-    <ul>
-      <li>ONNX / PyTorch</li>
-      <li>Graph Compilation</li>
-      <li>ReAct Agents</li>
-      <li>Drift Detection</li>
-      <li>Prompt Engineering</li>
-    </ul>
-  </div>
-
-  <div class="skill-col">
-    <div class="skill-col-header">Infra</div>
-    <ul>
-      <li>Docker</li>
-      <li>Redis</li>
-      <li>gRPC / Protobuf</li>
-      <li>Apache Spark</li>
-      <li>Streamlit</li>
-    </ul>
-  </div>
-
-</div>`,
-
-  resume: `
-<div class="out-line success">
-  Opening resume...
-</div>
-<div class="out-line muted" style="margin-top:6px">
-  <!-- Swap the href below with your Google Drive resume link -->
-  <a href="#" target="_blank"
-     style="color:var(--pink-bright)">
-    → resume.pdf ↗
-  </a>
-  &nbsp; (update link in index.html when ready)
-</div>`,
-
-  contact: `
-<div class="out-heading">contact</div>
-<div class="kv-table">
-  <span class="kv-key">email</span>
-  <span class="kv-val">
-    <a href="mailto:sranushka2025@gmail.com">sranushka2025@gmail.com</a>
-  </span>
-  <span class="kv-key">linkedin</span>
-  <span class="kv-val">
-    <a href="https://www.linkedin.com/in/anushka-raghunandan/"
-       target="_blank">linkedin.com/in/anushka-raghunandan ↗</a>
-  </span>
-  <span class="kv-key">github</span>
-  <span class="kv-val">
-    <a href="https://github.com/siriscent7"
-       target="_blank">github.com/siriscent7 ↗</a>
-  </span>
-</div>`,
-
-  help: `
-<div class="out-heading">available commands</div>
-<div class="help-table">
-  <span class="help-cmd">about</span>
-  <span class="help-desc">who I am</span>
-
-  <span class="help-cmd">experience</span>
-  <span class="help-desc">work history and education</span>
-
-  <span class="help-cmd">projects</span>
-  <span class="help-desc">things I've built</span>
-
-  <span class="help-cmd">skills</span>
-  <span class="help-desc">languages, systems, tools</span>
-
-  <span class="help-cmd">resume</span>
-  <span class="help-desc">open my resume</span>
-
-  <span class="help-cmd">contact</span>
-  <span class="help-desc">get in touch</span>
-
-  <span class="help-cmd">clear</span>
-  <span class="help-desc">clear the terminal</span>
-
-  <span class="help-cmd">help</span>
-  <span class="help-desc">show this menu</span>
-</div>`,
-
-};
-
-// ═══════════════════════════════════════════════════
-//  ENGINE
-// ═══════════════════════════════════════════════════
-const output   = document.getElementById('output');
-const input    = document.getElementById('cmd-input');
-const body     = document.getElementById('terminal-body');
-const history  = [];
-let   histIdx  = -1;
-
-function appendBlock(cmdText, contentHTML) {
-  // Echo the command
-  const cmdLine = document.createElement('div');
-  cmdLine.className = 'cmd-line';
-  cmdLine.innerHTML = `
-    <span class="prompt">
-      <span class="prompt-path">anushka@siriscent7</span>:<span
-        style="color:var(--pink-dim)">~</span><span
-        class="prompt-dollar">$</span>
-    </span>
-    <span class="cmd-text">${escHtml(cmdText)}</span>`;
-  output.appendChild(cmdLine);
-
-  // Render output
-  const block = document.createElement('div');
-  block.className = 'output-block';
-  block.innerHTML = contentHTML;
-  output.appendChild(block);
-
-  // Scroll to bottom
-  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-}
-
-function escHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
-
-function runCommand(raw) {
-  const cmd = raw.trim().toLowerCase();
-  if (!cmd) return;
-
-  // History
-  history.unshift(raw.trim());
-  histIdx = -1;
-
-  if (cmd === 'clear') {
-    output.innerHTML = '';
-    document.getElementById('boot').style.display = 'none';
-    return;
+  function appendLine(html, cls = '') {
+    const div = document.createElement('div');
+    div.className = 'output-line ' + cls;
+    div.innerHTML = html;
+    output.appendChild(div);
+    output.scrollTop = output.scrollHeight;
   }
 
-  if (DATA[cmd]) {
-    appendBlock(raw.trim(), DATA[cmd]);
-    return;
-  }
+  function runCommand(raw) {
+    const cmd = raw.trim().toLowerCase();
+    appendLine(`<span class="prompt-echo">❯ ${raw}</span>`);
 
-  // Unknown command
-  appendBlock(raw.trim(), `
-    <div class="out-error">
-      command not found: ${escHtml(cmd)}
-    </div>
-    <div class="out-line muted" style="margin-top:4px">
-      Type <span style="color:var(--pink-bright)">help</span>
-      to see available commands.
-    </div>`);
-}
+    if (!cmd) return;
 
-// ── Input handler ──
-input.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    const val = input.value;
-    input.value = '';
-    runCommand(val);
-  }
+    if (cmd === 'clear') {
+      output.innerHTML = '';
+      return;
+    }
 
-  // Arrow up / down for history
-  if (e.key === 'ArrowUp') {
-    e.preventDefault();
-    if (histIdx < history.length - 1) {
-      histIdx++;
-      input.value = history[histIdx];
+    if (cmd === 'resume') {
+      window.open('#', '_blank');
+      appendLine(`<span class="dim">Opening resume...</span>`);
+      return;
+    }
+
+    if (DATA[cmd]) {
+      appendLine(DATA[cmd]);
+    } else {
+      appendLine(`<span class="err">command not found: ${cmd} — try <span class="accent">help</span></span>`);
     }
   }
-  if (e.key === 'ArrowDown') {
-    e.preventDefault();
-    if (histIdx > 0) {
-      histIdx--;
-      input.value = history[histIdx];
-    } else {
-      histIdx = -1;
+
+  // Boot
+  function boot() {
+    let i = 0;
+    function next() {
+      if (i < BOOT_LINES.length) {
+        appendLine(BOOT_LINES[i]);
+        i++;
+        setTimeout(next, 60);
+      }
+    }
+    next();
+  }
+  boot();
+
+  // Input handling
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const val = input.value;
+      if (val.trim()) { history.unshift(val); historyIdx = -1; }
+      runCommand(val);
       input.value = '';
     }
-  }
-});
+    if (e.key === 'ArrowUp') {
+      if (historyIdx < history.length - 1) historyIdx++;
+      input.value = history[historyIdx] || '';
+    }
+    if (e.key === 'ArrowDown') {
+      if (historyIdx > 0) historyIdx--;
+      else { historyIdx = -1; input.value = ''; return; }
+      input.value = history[historyIdx] || '';
+    }
+  });
 
-// Keep input focused when clicking anywhere
-document.addEventListener('click', () => input.focus());
+  // Click anywhere on terminal body to focus input
+  document.getElementById('terminalBody').addEventListener('click', () => input.focus());
 
-// Auto-focus on load
-input.focus();
-</script>
+  // ─────────────────────────────────────────
+  // COLLAPSE / CLOSE
+  // ─────────────────────────────────────────
+  const container = document.getElementById('terminalContainer');
+  const body      = document.getElementById('terminalBody');
+  const toggle    = document.getElementById('termToggle');
+  const closeBtn  = document.getElementById('termClose');
 
+  toggle.addEventListener('click', () => {
+    const collapsed = body.classList.toggle('collapsed');
+    toggle.textContent = collapsed ? '▴' : '▾';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    container.style.display = 'none';
+  });
+
+  </script>
 </body>
 </html>
