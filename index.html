@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anushka Siri Raghunandan — Technical Consulting Engineer, Systems & Security Builder." />
+  <title>Anushka Siri Raghunandan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-text">
+          <h1>Hi, my name is <span>Anushka.</span></h1>
+          <p class="hero-tagline">
+            I love <strong>Systems.</strong><br />
+            I love <strong>Security.</strong><br />
+            I love building things that are <strong>fast, correct, and hard to break.</strong>
+          </p>
+          <div class="hero-links">
+            <a href="#" class="btn">Resume</a>
+            <a href="https://www.linkedin.com/in/anushka-raghunandan/" target="_blank" class="icon-link">LinkedIn ↗</a>
+            <a href="mailto:sranushka2025@gmail.com" class="icon-link">Email ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <!-- Swap src with your actual photo path -->
+          <div class="photo-placeholder">your photo here</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       EXPERIENCE + EDUCATION
+  ══════════════════════════════ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">Experience &amp; Education</div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="role">Technical Consulting Engineer II</div>
+          <div class="org">Cisco</div>
+          <div class="period">2023 – Present · Bengaluru, India</div>
+          <div class="desc">
+            Enterprise networking and security consulting. Helping customers architect,
+            deploy, and troubleshoot infrastructure at scale.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="role">B.Tech — Computer Science &amp; Engineering</div>
+          <div class="org">PES University</div>
+          <div class="period">2019 – 2023 · Bengaluru, India</div>
+          <div class="desc">
+            Core CS: systems, algorithms, networks, databases.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       PROJECTS
+  ══════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">Projects</div>
+
+      <div class="projects-grid">
+
+        <!-- 1 -->
+        <div class="project-card">
+          <div class="card-title">VeritasDB</div>
+          <div class="tags">
+            <span class="tag">Distributed Systems</span>
+            <span class="tag">Java</span>
+          </div>
+          <div class="card-desc">
+            Distributed transactional key-value store from scratch. Raft consensus,
+            LSM-tree storage, MVCC snapshot isolation — real multi-process cluster over gRPC.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/siriscent7/veritasdb" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="project-card">
+          <div class="card-title">SentinelIAM</div>
+          <div class="tags">
+            <span class="tag">Security</span>
+            <span class="tag">Go</span>
+          </div>
+          <div class="card-desc">
+            OAuth2 / OIDC identity platform from scratch. PKCE, RS256 JWTs, refresh rotation
+            with theft detection, RBAC, and AES-256-GCM envelope encryption.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/siriscent7/sentineliam" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="project-card">
+          <div class="card-title">Flurry</div>
+          <div class="tags">
+            <span class="tag">Query Engine</span>
+            <span class="tag">Java</span>
+          </div>
+          <div class="card-desc">
+            Columnar SQL query engine from scratch. Hand-written lexer/parser,
+            rule-based optimizer, morsel-driven parallel execution — 2.9× speedup on 2M rows.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/siriscent7/flurry" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="project-card">
+          <div class="card-title">OptiFlow</div>
+          <div class="tags">
+            <span class="tag">ML Systems</span>
+            <span class="tag">Python</span>
+          </div>
+          <div class="card-desc">
+            Neural network graph compiler. Lifts ONNX models into a custom IR, runs
+            constant folding, dead-node elimination, and operator fusion — 27% p95 latency drop on ResNet-18.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/siriscent7/optiflow" target="_blank">GitHub ↗</a>
+            <a href="https://github.com/siriscent7/optiflow" target="_blank">Demo ↗</a>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="project-card">
+          <div class="card-title">TenantGuard</div>
+          <div class="tags">
+            <span class="tag">Backend</span>
+            <span class="tag">Go</span>
+          </div>
+          <div class="card-desc">
+            Multi-tenant rate-limiting control plane. Distributed token-bucket via atomic
+            Redis Lua scripts — 2,340 req/s, zero errors under k6 load test.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/siriscent7/tenantguard" target="_blank">GitHub ↗</a>
+            <a href="https://tenantguard-bvid.onrender.com" target="_blank">Live ↗</a>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="project-card">
+          <div class="card-title">Warden</div>
+          <div class="tags">
+            <span class="tag">AI Safety</span>
+            <span class="tag">Python</span>
+          </div>
+          <div class="card-desc">
+            LLM attack &amp; defense evaluation harness. Fires jailbreak batteries,
+            applies layered defenses, measures ASR — with honest generalization gap reporting.
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/siriscent7/warden" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       SKILLS
+  ══════════════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">Skills</div>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul>
+            <li>Java</li>
+            <li>Go</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Systems</h3>
+          <ul>
+            <li>Distributed Systems</li>
+            <li>Query Engines</li>
+            <li>Consensus (Raft)</li>
+            <li>LSM-tree / Storage</li>
+            <li>MVCC / Transactions</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Security</h3>
+          <ul>
+            <li>OAuth2 / OIDC</li>
+            <li>JWT / PKCE</li>
+            <li>IAM / RBAC</li>
+            <li>LLM Red-teaming</li>
+            <li>PII Redaction</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>AI / ML</h3>
+          <ul>
+            <li>ONNX / PyTorch</li>
+            <li>Graph Compilation</li>
+            <li>ReAct Agents</li>
+            <li>Drift Detection</li>
+            <li>Prompt Engineering</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Infra</h3>
+          <ul>
+            <li>Docker</li>
+            <li>Redis</li>
+            <li>gRPC / Protobuf</li>
+            <li>Apache Spark</li>
+            <li>GitHub Pages</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer>
+    <div class="container">
+      © 2025 Anushka Siri Raghunandan ·
+      <a href="mailto:sranushka2025@gmail.com">sranushka2025@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/anushka-raghunandan/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>
