@@ -284,6 +284,10 @@ a:hover { text-decoration: underline; }
   margin-bottom: 1.1rem;
 }
 
+.about-text .accent {
+  color: var(--accent) !important;
+}
+
 .about-personal { font-style: italic; margin-top: 0.5rem; }
 
 .about-subhead {
