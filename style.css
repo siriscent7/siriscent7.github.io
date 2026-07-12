@@ -133,9 +133,9 @@ a:hover { text-decoration: underline; }
    PAGE
 ═══════════════════════════════════════════ */
 .page {
-  max-width: 780px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem 4rem;
+  padding: 0 3rem 4rem;
 }
 
 /* ═══════════════════════════════════════════
