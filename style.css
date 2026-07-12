@@ -161,6 +161,8 @@ a:hover { text-decoration: underline; }
   color: var(--accent);
 }
 
+.accent { color: var(--accent); }
+
 @keyframes fadeUp {
   from {
     opacity: 0;
