@@ -204,55 +204,56 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+   <!-- PROJECTS -->
     <section class="section" id="projects">
       <h2 class="section-title">projects<span class="accent">.</span></h2>
       <div class="project-grid">
-
+    
         <div class="project-card">
           <div class="card-header">
             <span class="card-title">VeritasDB</span>
             <span class="card-tag">Distributed Systems</span>
           </div>
-          <p>Distributed transactional KV store — custom Raft consensus,
-            LSM-tree engine, MVCC, automatic leader election and failover.</p>
+          <p>Distributed transactional KV store with an LSM-tree storage engine,
+            MVCC snapshot isolation, and Raft consensus with persistent state,
+            automatic leader election, log replication, and failover.</p>
           <div class="card-stack">Java 17 · Raft · gRPC · LSM-tree · MVCC</div>
         </div>
-
+    
         <div class="project-card">
           <div class="card-header">
             <span class="card-title">Flurry</span>
             <span class="card-tag">Query Engine</span>
           </div>
-          <p>Columnar SQL engine — full pipeline lex → parse → plan →
-            optimize → execute.
-            <span class="accent">2.9× speedup</span> via morsel-driven
-            multithreading.</p>
-          <div class="card-stack">Java 17 · SQL · Columnar Exec · Parallel Query</div>
+          <p>Columnar SQL engine with a full
+            <span class="accent">lex → parse → plan → optimize → execute</span>
+            pipeline and Volcano execution model.
+            <span class="accent">2.9× speedup</span> via morsel-driven parallelism.</p>
+          <div class="card-stack">Java 17 · SQL · Query Optimization · Parallel Execution</div>
         </div>
-
+    
         <div class="project-card">
           <div class="card-header">
-            <span class="card-title">Warden</span>
-            <span class="card-tag">LLM Security</span>
+            <span class="card-title">SentinelIAM</span>
+            <span class="card-tag">Security</span>
           </div>
-          <p>LLM attack/defense harness. Cut ASR
-            <span class="accent">56% → 0%</span> on tuned attacks,
-            then exposed overfitting — spiked to 67% with
-            alignment stripped.</p>
-          <div class="card-stack">Python · Ollama · SQLite · Red Teaming</div>
+          <p>OAuth2/OIDC identity provider implementing PKCE, RS256 JWTs,
+            JWKS, refresh-token rotation with reuse detection, RBAC,
+            token revocation, and envelope encryption.</p>
+          <div class="card-stack">Go · OAuth2 · OIDC · JWT · PKCE · Cryptography</div>
         </div>
-
+    
         <div class="project-card">
           <div class="card-header">
-            <span class="card-title">DataForge</span>
-            <span class="card-tag">Data Engineering</span>
+            <span class="card-title">OptiFlow</span>
+            <span class="card-tag">ML Systems</span>
           </div>
-          <p>End-to-end Spark pipeline into a star-schema warehouse
-            with SCD2 upserts, orchestrated as an Airflow DAG.</p>
-          <div class="card-stack">Python · PySpark · Parquet · Airflow</div>
+          <p>Neural-network graph compiler that lowers ONNX models into a custom IR
+            and applies constant folding, dead-node elimination, and operator fusion.
+            ResNet-18 reduced from <span class="accent">51 → 34 nodes</span>.</p>
+          <div class="card-stack">Python · ONNX · PyTorch · Graph IR · Optimization</div>
         </div>
-
+    
       </div>
     </section>
 
