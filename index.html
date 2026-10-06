@@ -291,10 +291,10 @@
 
 
   <!-- TERMINAL REOPEN TAB -->
-  <div class="term-reopen" id="termReopen">terminal_</div>
+  <div class="term-reopen visible" id="termReopen">terminal_</div>
 
   <!-- FLOATING TERMINAL -->
-  <div class="terminal-container" id="terminalContainer">
+  <div class="terminal-container hidden" id="terminalContainer">
     <div class="terminal-titlebar">
       <div class="terminal-dots">
         <span class="dot dot-red"    id="termClose" title="close"></span>
@@ -308,16 +308,6 @@
       <div class="terminal-output" id="output"></div>
       <div class="terminal-input-row">
         <span class="prompt">❯</span>
-        <input
-          type="text"
-          id="termInput"
-          class="term-input"
-          autocomplete="off"
-          autocorrect="off"
-          spellcheck="false"
-          placeholder="type 'help'"
-          autofocus
-        />
       </div>
     </div>
   </div>
