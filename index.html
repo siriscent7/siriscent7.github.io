@@ -208,7 +208,7 @@
     <section class="section" id="projects">
       <h2 class="section-title">projects<span class="accent">.</span></h2>
       <div class="project-grid">
-    
+
         <div class="project-card">
           <div class="card-header">
             <span class="card-title">VeritasDB</span>
@@ -219,7 +219,7 @@
             automatic leader election, log replication, and failover.</p>
           <div class="card-stack">Java 17 · Raft · gRPC · LSM-tree · MVCC</div>
         </div>
-    
+
         <div class="project-card">
           <div class="card-header">
             <span class="card-title">Flurry</span>
@@ -231,7 +231,7 @@
             <span class="accent">2.9× speedup</span> via morsel-driven parallelism.</p>
           <div class="card-stack">Java 17 · SQL · Query Optimization · Parallel Execution</div>
         </div>
-    
+
         <div class="project-card">
           <div class="card-header">
             <span class="card-title">SentinelIAM</span>
@@ -242,7 +242,7 @@
             token revocation, and envelope encryption.</p>
           <div class="card-stack">Go · OAuth2 · OIDC · JWT · PKCE · Cryptography</div>
         </div>
-    
+
         <div class="project-card">
           <div class="card-header">
             <span class="card-title">OptiFlow</span>
@@ -253,7 +253,7 @@
             ResNet-18 reduced from <span class="accent">51 → 34 nodes</span>.</p>
           <div class="card-stack">Python · ONNX · PyTorch · Graph IR · Optimization</div>
         </div>
-    
+
       </div>
     </section>
 
@@ -290,10 +290,10 @@
   </main>
 
 
-  <!-- TERMINAL REOPEN TAB -->
+  <!-- TERMINAL REOPEN TAB (visible on load) -->
   <div class="term-reopen visible" id="termReopen">terminal_</div>
 
-  <!-- FLOATING TERMINAL -->
+  <!-- FLOATING TERMINAL (hidden on load) -->
   <div class="terminal-container hidden" id="terminalContainer">
     <div class="terminal-titlebar">
       <div class="terminal-dots">
@@ -308,6 +308,15 @@
       <div class="terminal-output" id="output"></div>
       <div class="terminal-input-row">
         <span class="prompt">❯</span>
+        <input
+          type="text"
+          id="termInput"
+          class="term-input"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          placeholder="type 'help'"
+        />
       </div>
     </div>
   </div>
@@ -362,12 +371,12 @@
           — SQL engine · full pipeline · 2.9× speedup · Java 17
         </div>
         <div class="proj-entry">
-          <span class="proj-name">Warden</span>
-          — LLM attack/defense · ASR 56%→0% · Python + Ollama
+          <span class="proj-name">SentinelIAM</span>
+          — OAuth2/OIDC provider · PKCE, JWT, RBAC · Go
         </div>
         <div class="proj-entry">
-          <span class="proj-name">DataForge</span>
-          — Spark pipeline · star schema · SCD2 · Airflow
+          <span class="proj-name">OptiFlow</span>
+          — ONNX graph compiler · ResNet-18 51→34 nodes · Python
         </div>
       </div>`,
 
@@ -468,7 +477,7 @@
     if (!cmd) return;
     if (cmd === 'clear') { output.innerHTML = ''; return; }
     if (cmd === 'resume') {
-      window.open('https://drive.google.com/your-resume-link', '_blank');
+      window.open('https://tinyurl.com/mrxayx2f', '_blank');
       appendLine(`<span class="dim">Opening resume...</span>`);
       return;
     }
@@ -481,16 +490,6 @@
       );
     }
   }
-
-  (function boot() {
-    let i = 0;
-    (function next() {
-      if (i < BOOT_LINES.length) {
-        appendLine(BOOT_LINES[i++]);
-        setTimeout(next, 55);
-      }
-    })();
-  })();
 
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
@@ -514,25 +513,41 @@
   document.getElementById('terminalBody')
     .addEventListener('click', () => input.focus());
 
+  /* ── Terminal open / close ── */
+  let booted = false;
+
+  function boot() {
+    if (booted) return;
+    booted = true;
+    let i = 0;
+    (function next() {
+      if (i < BOOT_LINES.length) {
+        appendLine(BOOT_LINES[i++]);
+        setTimeout(next, 55);
+      }
+    })();
+  }
+
   const container = document.getElementById('terminalContainer');
   const reopen    = document.getElementById('termReopen');
 
-  document.getElementById('termClose').addEventListener('click', () => {
+  function openTerminal() {
+    container.classList.remove('hidden');
+    reopen.classList.remove('visible');
+    boot();
+    setTimeout(() => input.focus(), 350);
+  }
+
+  function closeTerminal() {
     container.classList.add('hidden');
     reopen.classList.add('visible');
-  });
+  }
 
-  document.getElementById('termOpen').addEventListener('click', () => {
-    container.classList.remove('hidden');
-    reopen.classList.remove('visible');
-  });
+  document.getElementById('termClose').addEventListener('click', closeTerminal);
+  document.getElementById('termOpen').addEventListener('click', openTerminal);
+  reopen.addEventListener('click', openTerminal);
 
-  reopen.addEventListener('click', () => {
-    container.classList.remove('hidden');
-    reopen.classList.remove('visible');
-    setTimeout(() => input.focus(), 350);
-  });
-
+  /* ── Theme toggle ── */
   const themeBtn = document.getElementById('themeToggle');
   themeBtn.addEventListener('click', () => {
     const isLight = document.body.classList.toggle('light');
